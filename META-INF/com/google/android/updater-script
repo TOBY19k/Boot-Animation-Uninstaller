@@ -1,0 +1,46 @@
+# Before: ui_print("  Hi! ");
+# Now:    ui_print " Hi! "
+#-----------Dynamic Installer Configs-----------#
+#The #MAGISK tag is required, dont remove it
+#MAGISK
+setdefault magisk_support on
+setdefault import_addons off
+setdefault apex_mount off
+setdefault extraction_speed default
+setdefault permissions "0:0:0755:0644"
+setdefault devices off
+#-----------------------------------------------#
+#Your script starts here:
+ui_print " "
+ui_print " -- Mounting partitions..."
+mount_all
+ui_print " -- Locating Boot Animation -- "
+if exist file "/system/media/bootanimation.zip"; then
+   ui_print " Boot Animation is located in the system/media folder "
+ui_print " deleting boot animation "
+delete_recursive /system/media/bootanimation.zip
+ui_print " deleting addon.d survival script"
+delete_recursive /system/addon.d/11-BootAnimation.sh
+delete_recursive /system/addon.d/11-SealOsBootAnimation.sh
+delete_recursive /system/addon.d/19-OnePlusBootAnimation.sh
+ui_print " restoring previous boot animation "
+move "sdcard/BootAnimationBackup/bootanimation.zip" "system/media/bootanimation.zip"
+ui_print " deleting boot animation back up folder "
+delete_recursive /sdcard/BootAnimationBackup
+else
+   ui_print " Boot Animation is located in the system/product/media folder "
+ui_print " deleting boot animation "
+delete_recursive /system/product/media/bootanimation.zip
+ui_print " deleting addon.d survival script"
+delete_recursive /system/addon.d/19-BootAnimation.sh
+delete_recursive /system/addon.d/19-SealOsBootAnimation.sh
+ui_print " restoring previous boot animation "
+move "sdcard/BootAnimationBackup/bootanimation.zip" "system/product/media/bootanimation.zip"
+ui_print " deleting boot animation back up folder "
+delete_recursive /sdcard/BootAnimationBackup
+fi
+ui_print " -- Unmounting ALL -- "
+umount_all
+ui_print " "
+ui_print " -- Done -- "
+ui_print " "
