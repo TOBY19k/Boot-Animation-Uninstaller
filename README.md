@@ -1,5 +1,5 @@
 # Boot-Animation-Uninstaller-
-Flash able zip file to uninstall Seal Os Boot Animation.
+Flash able zip file to uninstall [Seal Os Boot Animation](https://github.com/TOBY19k/Seal-Os-Boot-Animation-Installer).
 Fully based on [Dynamic Installer](https://forum.xda-developers.com/t/zip-dual-installer-dynamic-installer-stable-4-6-b2-android-10-or-earlier.4279541/).
 ### How To Install
 1. Download Boot Animation Uninstaller
