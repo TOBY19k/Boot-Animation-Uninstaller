@@ -19,4 +19,4 @@ jobs:
         with:
           name: BootAnimationUninstaller
           path: |
-            /${{ github.workspace }}/META-INF
+            ${{ github.workspace }}/META-INF
