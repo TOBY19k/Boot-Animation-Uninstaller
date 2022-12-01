@@ -18,5 +18,4 @@ jobs:
       - uses: actions/upload-artifact@v3
         with:
           name: BootAnimationUninstaller
-          path: |
-            /${{ github.workspace }}/
+          path: /${{ github.workspace }}/META-INF
