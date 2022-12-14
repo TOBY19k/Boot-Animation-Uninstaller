@@ -3,4 +3,4 @@
 - Turned setdefault devices off
 - Made GitHub action that builds Boot Animation Uninstaller and a separate one that builds and release's it
 
-**Full Changelog** [V1.0.2...V1.0.3](https://github.com/TOBY19k/Boot-Animation-Installer/compare/V1.0.2...V1.0.3)
+**Full Changelog** [V1.0.2...V1.0.3](https://github.com/TOBY19k/Boot-Animation-Uninstaller/compare/V1.0.2...V1.0.3)
