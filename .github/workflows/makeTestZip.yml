@@ -1,4 +1,4 @@
-name: Make Boot Animation Uninstaller
+name: Make Test Zip 
 
 # Controls when the workflow will run
 on:
@@ -19,7 +19,7 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
       # Runs a set of commands using the runners shell
-      - name: Delete files & folder that we don't want in the flash file
+      - name: Delete files & folders that we don't want in the flash file
         run: |
           rm LICENSE
           rm README.md
