@@ -12,7 +12,7 @@ setdefault devices off
 #-----------------------------------------------#
 #Your script starts here:
 ui_print " "
-ui_print " -- Mounting partitions..."
+ui_print "-- Mounting partitions --"
 mount_all
 ui_print "Finding bootanimation.zip"
 #figure out where the boot animation is located. This part uses code from BlassGo's  Bootanimation_Maker[1.1] script 
@@ -29,7 +29,7 @@ delete_recursive /sdcard/BootAnimationBackup
 ui_print "Checking if rom has addon.d support"
 if exist folder "/system/addon.d"; then
    ui_print "Rom has addon.d support"
-   ui_print " deleting addon.d survival script"
+   ui_print "Deleting addon.d survival script"
    delete_recursive /system/addon.d/11-BootAnimation.sh
    delete_recursive /system/addon.d/11-SealOsBootAnimation.sh
    delete_recursive /system/addon.d/19-OnePlusBootAnimation.sh
@@ -38,8 +38,8 @@ if exist folder "/system/addon.d"; then
 else
    ui_print "Rom doesn't have addon.d support"
 fi
-ui_print " -- Unmounting ALL -- "
+ui_print "-- Unmounting ALL --"
 umount_all
 ui_print " "
-ui_print " -- Done -- "
+ui_print "-- Done --"
 ui_print " "
