@@ -12,6 +12,7 @@ setdefault devices off
 #-----------------------------------------------#
 #Your script starts here:
 ui_print " "
+ui_print "-- Boot Animation Uninstaller --"
 ui_print "-- Mounting partitions --"
 mount_all
 ui_print "Finding bootanimation.zip"
@@ -30,11 +31,11 @@ ui_print "Checking if rom has addon.d support"
 if exist folder "/system/addon.d"; then
    ui_print "Rom has addon.d support"
    ui_print "Deleting addon.d survival script"
-   delete_recursive /system/addon.d/11-BootAnimation.sh
-   delete_recursive /system/addon.d/11-SealOsBootAnimation.sh
-   delete_recursive /system/addon.d/19-OnePlusBootAnimation.sh
-   delete_recursive /system/addon.d/19-BootAnimation.sh
-   delete_recursive /system/addon.d/19-SealOsBootAnimation.sh
+   delete /system/addon.d/11-BootAnimation.sh
+   delete /system/addon.d/11-SealOsBootAnimation.sh
+   delete /system/addon.d/19-OnePlusBootAnimation.sh
+   delete /system/addon.d/19-BootAnimation.sh
+   delete /system/addon.d/19-SealOsBootAnimation.sh
 else
    ui_print "Rom doesn't have addon.d support"
 fi
