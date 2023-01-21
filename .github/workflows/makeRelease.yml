@@ -22,7 +22,7 @@ jobs:
         with:
           name: BootAnimationUninstaller
           path: /${{ github.workspace }}/META-INF
-      - name: Zip Seal Os Boot Animation Installer 
+      - name: Zip Boot Animation Uninstaller
         run: |
           zip -r BootAnimationUninstaller.zip META-INF
       - name: Publish release Zip 
