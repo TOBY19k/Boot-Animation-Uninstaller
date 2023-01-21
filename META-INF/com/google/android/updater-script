@@ -32,5 +32,4 @@ else
 fi
 ui_print "-- Unmounting ALL --"
 umount_all
-ui_print " "
 ui_print "-- Done --"
